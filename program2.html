@@ -1,0 +1,22 @@
+<html>
+<body>
+<p id="demo"></p>
+<script>
+var var1=setInterval(inTimer,1000);var size=5;
+var ids=document.getElementById("demo");function inTimer(){
+ids.innerHTML='TEXT GROWING';
+ids.setAttribute('style',"font-size:"+size+"px;color:red"); size+=5;
+if(size>=50){clearInterval(var1);
+var2=setInterval(deTimer,1000);
+}
+}
+function deTimer(){ size-=5;
+ids.innerHTML='TEXT SHRIKING';
+ids.setAttribute('style',"font-size:"+size+"px;color:blue");
+if(size==5){
+clearInterval(var2);
+}
+}
+</script>
+</body>
+</html>
